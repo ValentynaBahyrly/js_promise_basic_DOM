@@ -34,7 +34,14 @@ const promise2 = new Promise((resolve, reject) => {
 });
 
 promise2
-  .then(() => {})
+  .then(() => {
+    const message = document.createElement('div');
+
+    message.classList.add('message');
+    message.textContent = 'Promise was resolved!';
+
+    document.body.append(message);
+  })
 
   .catch(() => {
     const message = document.createElement('div');
